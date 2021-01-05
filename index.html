@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+	<h1>Hello World This is my title/h1>
+	<p> And this a some content.</p>
+	<div id="webchat"></div>
+    <script src="https://cdn.jsdelivr.net/npm/rasa-webchat@0.11.5/lib/index.min.js"></script>
+    
+    <script>
+      WebChat.default.init({
+        selector: "#webchat",
+        initPayload: "/get_started",
+        customData: {"language": "en"}, // arbitrary custom data. Stay minimal as this will be added to the socket
+        socketUrl: "http://104.198.26.96//",
+        socketPath: "/socket.io/",
+        title: "Syra",
+        subtitle: "Digital Assistant for Tax Advice",
+        params: {"storage": "session"} // can be set to "local"  or "session". details in storage section.
+      })
+    </script>
+</body>
+</html>
